@@ -1,13 +1,12 @@
 import SwiftyMediator
 import MediatorTypes
 
-extension ModuleAMediatorType {
+extension ModuleAMediatorType: MediatorSourceType {
     public var viewController: UIViewController? {
         switch self {
         case .home(let title):
-            let vc = UIViewController()
+            let vc = ViewController()
             vc.title = title
-            vc.view.backgroundColor = .white
             return vc
             
         case .detail(let id):
@@ -17,4 +16,5 @@ extension ModuleAMediatorType {
             return vc
         }
     }
+    
 }

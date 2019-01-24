@@ -5,7 +5,7 @@ extension ModuleAMediatorType: MediatorSourceType {
     public var viewController: UIViewController? {
         switch self {
         case .home(let title):
-            let vc = UIViewController()
+            let vc = ViewController()
             vc.title = title
             return vc
             

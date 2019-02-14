@@ -26,8 +26,7 @@ class ViewController: UIViewController {
     }
     
     @objc func alert() {
-        let mediator = SwiftyMediator()
-        mediator.present(ModuleBMediatorType.showAlert(title: "Form Home", message: "Hello SwiftyMediator"))
+        Mediator.present(ModuleBMediatorType.showAlert(title: "Form Home", message: "Hello SwiftyMediator"))
     }
 
 }
